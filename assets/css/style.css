@@ -1,0 +1,49 @@
+@import "flowbite";
+
+/* #7a0000 */
+/* .nav{
+    background-color: #520202;
+} */
+.nav {
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 50;
+}
+
+.logoName {
+    color: #ffffff;
+    font-family: "Chela One", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.logo {
+    max-width: 4vw;
+}
+
+.navLinks {
+    background-color: transparent;
+}
+
+.navContent {
+    color: #e0dfdf;
+    font-family: "Akshar", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.2rem;
+}
+
+#search-navbar {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #7a0000;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 0.5rem;
+    padding-left: 2.5rem;
+}
+
+.search-navbar::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
