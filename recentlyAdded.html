@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Akshar:wght@300..700&family=Chela+One&family=Edu+NSW+ACT+Cursive:wght@400..700&family=Libertinus+Sans:ital,wght@0,400;0,700;1,400&family=Lobster&family=Neucha&family=Permanent+Marker&family=Playwrite+AU+NSW:wght@100..400&family=Uncial+Antiqua&display=swap"
+        rel="stylesheet">
+    <title>FILMORA | Recently Added</title>
+</head>
+
+<body>
+
+    <nav class="bg-[#0A0A0F] border-gray-200 dark:bg-gray-900 nav relative z-50">
+        <div class="max-w-screen-xl flex items-center justify-between mx-auto p-4">
+
+            <!-- Logo -->
+            <a href="index.html" class="flex items-center space-x-3 rtl:space-x-reverse">
+                <img src="./assets/images/logoNoBg.png" class="logo" alt="FILMORA Logo" />
+                <span
+                    class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white logoName">FILMORA</span>
+            </a>
+
+            <!-- Desktop nav links -->
+            <ul class="hidden md:flex items-center gap-6 font-medium text-white navLinks">
+                <li><a href="index.html" class="hover:text-red-500 navContent">Home</a></li>
+                <li><a href="discover.html" class="hover:text-red-500 navContent">Discover</a></li>
+                <li><a href="recentlyAdded.html" class="hover:text-red-500 navContent">Recently Added</a></li>
+                <li><a href="myList.html" class="hover:text-red-500 navContent">MyList</a></li>
+            </ul>
+
+            <!-- Search + Login (desktop only) -->
+            <div class="hidden md:flex items-center gap-3">
+                <div class="relative">
+                    <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                        <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" fill="none" viewBox="0 0 20 20">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
+                        </svg>
+                    </div>
+                    <input type="text" id="search-navbar-desktop"
+                        class="w-40 lg:w-60 p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-red-500 focus:border-red-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:placeholder-gray-400"
+                        placeholder="Search...">
+                </div>
+                <a href="login.html"
+                    class="px-4 py-2 text-sm font-medium text-white bg-red-600 rounded-lg hover:bg-red-700 focus:ring-2 focus:ring-red-500 focus:outline-none">
+                    Login
+                </a>
+            </div>
+
+            <!-- Hamburger (mobile) -->
+            <button data-collapse-toggle="mobile-menu" type="button"
+                class="inline-flex items-center p-2 w-10 h-10 justify-center text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+                aria-controls="mobile-menu" aria-expanded="false">
+                <span class="sr-only">Open main menu</span>
+                <svg class="w-5 h-5" aria-hidden="true" fill="none" viewBox="0 0 17 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M1 1h15M1 7h15M1 13h15" />
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile menu -->
+        <div class="hidden md:hidden px-4 pb-4" id="mobile-menu">
+            <div class="relative mb-4">
+                <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                    <svg class="w-4 h-4 text-gray-500" fill="none" viewBox="0 0 20 20">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
+                    </svg>
+                </div>
+                <input type="text" id="search-navbar-mobile"
+                    class="block w-full p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-red-500 focus:border-red-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:placeholder-gray-400"
+                    placeholder="Search...">
+            </div>
+
+            <ul class="flex flex-col gap-2 font-medium">
+                <li><a href="index.html" class="block py-2 px-3 text-white bg-red-700 rounded-sm navContent">Home</a>
+                </li>
+                <li><a href="discover.html"
+                        class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 dark:text-white navContent">Discover</a>
+                </li>
+                <li><a href="recentlyAdded.html"
+                        class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 dark:text-white navContent">Recently
+                        Added</a></li>
+                <li><a href="myList.html"
+                        class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 dark:text-white navContent">MyList</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./assets/js/app.js"></script>
+</body>
+
+</html>

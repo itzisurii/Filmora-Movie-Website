@@ -10,125 +10,184 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Akshar:wght@300..700&family=Chela+One&family=Edu+NSW+ACT+Cursive:wght@400..700&family=Lobster&family=Neucha&family=Permanent+Marker&family=Playwrite+AU+NSW:wght@100..400&family=Uncial+Antiqua&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Akshar:wght@300..700&family=Chela+One&family=Edu+NSW+ACT+Cursive:wght@400..700&family=Libertinus+Sans:ital,wght@0,400;0,700;1,400&family=Lobster&family=Neucha&family=Permanent+Marker&family=Playwrite+AU+NSW:wght@100..400&family=Uncial+Antiqua&display=swap"
         rel="stylesheet">
-    <title>FILMORA</title>
+    <title>FILMORA | Home</title>
 </head>
 
 <body>
+    <div>
+        <div>
+            <nav class="bg-[#0A0A0F] border-gray-200 dark:bg-gray-900 nav relative z-50">
+                <div class="max-w-screen-xl flex items-center justify-between mx-auto p-4">
 
-    <nav class="bg-[#0A0A0F] border-gray-200 dark:bg-gray-900 nav">
-        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-            <a href="" class="flex items-center space-x-3 rtl:space-x-reverse">
-                <img src="./assets/images/logoNoBg.png" class="logo" alt="FILMORA Logo" />
-                <span
-                    class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white logoName">FILMORA</span>
-            </a>
+                    <!-- Logo -->
+                    <a href="index.html" class="flex items-center space-x-3 rtl:space-x-reverse">
+                        <img src="./assets/images/logoNoBg.png" class="logo" alt="FILMORA Logo" />
+                        <span
+                            class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white logoName">FILMORA</span>
+                    </a>
 
+                    <!-- Desktop nav links -->
+                    <ul class="hidden md:flex items-center gap-6 font-medium text-white navLinks">
+                        <li><a href="index.html" class="hover:text-red-500 navContent">Home</a></li>
+                        <li><a href="discover.html" class="hover:text-red-500 navContent">Discover</a></li>
+                        <li><a href="recentlyAdded.html" class="hover:text-red-500 navContent">Recently Added</a></li>
+                        <li><a href="myList.html" class="hover:text-red-500 navContent">MyList</a></li>
+                    </ul>
 
-            <div class="flex md:order-2 ">
-                <button type="button" data-collapse-toggle="navbar-search" aria-controls="navbar-search"
-                    aria-expanded="false"
-                    class="md:hidden text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 me-1">
-                    <svg class="w-5 h-5" aria-hidden="true" xmlns="" fill="none" viewBox="0 0 20 20">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
-                    </svg>
-                    <span class="sr-only">Search</span>
-                </button>
-
-                <!-- <div class="relative hidden md:block">
-                    <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
-                        <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="" fill="none"
-                            viewBox="0 0 20 20">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
-                        </svg>
-                        <span class="sr-only">Search icon</span>
+                    <!-- Search + Login (desktop only) -->
+                    <div class="hidden md:flex items-center gap-3">
+                        <div class="relative">
+                            <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                                <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" fill="none" viewBox="0 0 20 20">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
+                                </svg>
+                            </div>
+                            <input type="text" id="search-navbar-desktop"
+                                class="w-40 lg:w-60 p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-red-500 focus:border-red-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:placeholder-gray-400"
+                                placeholder="Search...">
+                        </div>
+                        <a href="login.html"
+                            class="px-4 py-2 text-sm font-medium text-white bg-red-600 rounded-lg hover:bg-red-700 focus:ring-2 focus:ring-red-500 focus:outline-none">
+                            Login
+                        </a>
                     </div>
-                    <input type="text" id="search-navbar"
-                        class="block w-full p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                        placeholder="Search...">
-                </div> -->
 
-                <div class="flex items-center gap-3">
-                    <div class="relative">
+                    <!-- Hamburger (mobile) -->
+                    <button data-collapse-toggle="mobile-menu" type="button"
+                        class="inline-flex items-center p-2 w-10 h-10 justify-center text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+                        aria-controls="mobile-menu" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="w-5 h-5" aria-hidden="true" fill="none" viewBox="0 0 17 14">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M1 1h15M1 7h15M1 13h15" />
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Mobile menu -->
+                <div class="hidden md:hidden px-4 pb-4" id="mobile-menu">
+                    <div class="relative mb-4">
                         <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
-                            <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" fill="none"
-                                viewBox="0 0 20 20">
+                            <svg class="w-4 h-4 text-gray-500" fill="none" viewBox="0 0 20 20">
                                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                                     stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
                             </svg>
                         </div>
-                        <!-- Smaller search bar -->
-                        <input type="text" id="search-navbar" class="w-40 lg:w-60 p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50
-                   focus:ring-red-500 focus:border-red-500 dark:bg-gray-700 dark:border-gray-600
-                   dark:placeholder-gray-400 dark:text-white dark:focus:ring-red-500 dark:focus:border-red-500"
+                        <input type="text" id="search-navbar-mobile"
+                            class="block w-full p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-red-500 focus:border-red-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:placeholder-gray-400"
                             placeholder="Search...">
                     </div>
 
-                    <!-- Login Button -->
-                    <a href="login.html" class="px-4 py-2 text-sm font-medium text-white bg-red-600 rounded-lg hover:bg-red-700 
-               focus:ring-2 focus:ring-red-500 focus:outline-none dark:bg-red-500 dark:hover:bg-red-600">
-                        Login
-                    </a>
+                    <ul class="flex flex-col gap-2 font-medium">
+                        <li><a href="index.html"
+                                class="block py-2 px-3 text-white bg-red-700 rounded-sm navContent">Home</a>
+                        </li>
+                        <li><a href="discover.html"
+                                class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 dark:text-white navContent">Discover</a>
+                        </li>
+                        <li><a href="recentlyAdded.html"
+                                class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 dark:text-white navContent">Recently
+                                Added</a></li>
+                        <li><a href="myList.html"
+                                class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 dark:text-white navContent">MyList</a>
+                        </li>
+                    </ul>
                 </div>
+            </nav>
 
+            <section class="main relative w-full h-[80vh]">
+                <img src="./assets/images/blackwidow.jpg" alt="Black Widow"
+                    class="w-full object-cover relative z-0">
 
-                <button data-collapse-toggle="navbar-search" type="button"
-                    class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 "
-                    aria-controls="navbar-search" aria-expanded="false">
-                    <span class="sr-only">Open main menu</span>
-                    <svg class="w-5 h-5" aria-hidden="true" xmlns="" fill="none" viewBox="0 0 17 14">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M1 1h15M1 7h15M1 13h15" />
-                    </svg>
-                </button>
-            </div>
+                <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent z-10">
 
-            <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-search">
-                <div class="relative mt-3 md:hidden">
-                    <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
-                        <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="" fill="none"
-                            viewBox="0 0 20 20">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
-                        </svg>
+                    <div class="absolute bottom-6 sm:bottom-10 md:bottom-16 lg:bottom-20 left-6 sm:left-12 text-white max-w-xl z-20 textOver">
+                        <div class="flex items-center gap-3 mb-2 text-xs sm:text-sm md:text-base">
+                            <span class="bg-yellow-500 text-black px-2 py-1 font-bold rounded">7.5</span>
+                            <span>2021</span>
+                            <span>•</span>
+                            <span>2h 14m</span>
+
+                        </div>
+
+                        <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold mb-2 sm:mb-3">
+                            BLACK WIDOW
+                        </h1>
+
+                        <p
+                            class="text-gray-300 text-sm sm:text-base md:text-lg mb-4 sm:mb-5 line-clamp-3 sm:line-clamp-none textOverDescription">
+                            Natasha Romanoff, aka Black Widow, confronts the darker parts of her ledger when a dangerous
+                            conspiracy
+                            with ties to her past arises.
+                        </p>
+
+                        <div class="flex flex-wrap gap-2 sm:gap-3 buttons">
+                            <button
+                                class="bg-red-600 hover:bg-red-700 text-white px-4 sm:px-6 py-2 rounded-lg font-semibold text-sm sm:text-base">
+                                ▶ Watch
+                            </button>
+                            <button
+                                class="bg-gray-600 hover:bg-gray-700 text-white px-4 sm:px-6 py-2 rounded-lg font-semibold text-sm sm:text-base">
+                                + Add to List
+                            </button>
+                        </div>
                     </div>
-                    <input type="text" id="search-navbar"
-                        class="block w-full p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-red-500 focus:border-red-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                        placeholder="Search...">
                 </div>
-                <ul
-                    class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700 navLinks">
-                    <li>
-                        <a href="index.html"
-                            class="block py-2 px-3 text-white bg-red-700 rounded-sm md:bg-transparent md:text-red-700 md:p-0 md:dark:text-red-500 navContent"
-                            aria-current="page">Home</a>
-                    </li>
-                    <li>
-                        <a href="discover.html"
-                            class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-red-700 md:p-0 md:dark:hover:text-red-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 navContent">Discover</a>
-                    </li>
-                    <li>
-                        <a href="contact.html"
-                            class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-red-700 md:p-0 dark:text-white md:dark:hover:text-red-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 navContent">Recently
-                            Added</a>
-                    </li>
-                    <li>
-                        <a href="contact.html"
-                            class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-red-700 md:p-0 dark:text-white md:dark:hover:text-red-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 navContent">MyList</a>
-                    </li>
-                </ul>
+            </section>
+        </div>
+
+        <div class="-mt-72 relative z-20 px-6">
+            <!-- Section Title -->
+            <h2 class="text-white text-2xl font-bold mb-6">Popular Movies</h2>
+
+            <div class="bg-gray-900 rounded-2xl p-4 shadow-lg popular">
+                <div class="flex space-x-6 overflow-x-auto scrollbar-hide">
+
+                    <div class="flex-shrink-0 w-40 sm:w-48 md:w-56 relative group">
+                        <img src="./assets/images/captainAmerica.webp" alt="Captain America"
+                            class="rounded-xl transition duration-300 transform group-hover:scale-105 group-hover:shadow-lg group-hover:shadow-red-500/70" />
+                    </div>
+
+                    <div class="flex-shrink-0 w-40 sm:w-48 md:w-56 relative group">
+                        <img src="./assets/images/spidermanNowayHome.jpg" alt="Spider-Man"
+                            class="rounded-xl transition duration-300 transform group-hover:scale-105 group-hover:shadow-lg group-hover:shadow-cyan-500/70" />
+                    </div>
+
+                    <div class="flex-shrink-0 w-40 sm:w-48 md:w-56 relative group">
+                        <img src="./assets/images/avengersEndGame.jpg" alt="Avengers Endgame"
+                            class="rounded-xl transition duration-300 transform group-hover:scale-105 group-hover:shadow-lg group-hover:shadow-yellow-400/70" />
+                    </div>
+
+                    <div class="flex-shrink-0 w-40 sm:w-48 md:w-56 relative group">
+                        <img src="./assets/images/starWars.jpg" alt="Star-wars"
+                            class="rounded-xl transition duration-300 transform group-hover:scale-105 group-hover:shadow-lg group-hover:shadow-yellow-400/70" />
+                    </div>
+
+                    <div class="flex-shrink-0 w-40 sm:w-48 md:w-56 relative group">
+                        <img src="./assets/images/starWars.jpg" alt="Star-wars"
+                            class="rounded-xl transition duration-300 transform group-hover:scale-105 group-hover:shadow-lg group-hover:shadow-yellow-400/70" />
+                    </div>
+
+                    <div class="flex-shrink-0 w-40 sm:w-48 md:w-56 relative group">
+                        <img src="./assets/images/starWars.jpg" alt="Star-wars"
+                            class="rounded-xl transition duration-300 transform group-hover:scale-105 group-hover:shadow-lg group-hover:shadow-yellow-400/70" />
+                    </div>
+
+                    <div class="flex-shrink-0 w-40 sm:w-48 md:w-56 relative group">
+                        <img src="./assets/images/starWars.jpg" alt="Star-wars"
+                            class="rounded-xl transition duration-300 transform group-hover:scale-105 group-hover:shadow-lg group-hover:shadow-yellow-400/70" />
+                    </div>
+                </div>
             </div>
         </div>
-    </nav>
-    <section class="main">
-        <img src="./assets/images/blackwidow.jpg" alt="">
-        <div>
+    </div>
 
-        </div>
-    </section>
+
+
+
 
 
 

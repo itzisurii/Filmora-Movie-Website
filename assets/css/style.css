@@ -33,17 +33,142 @@
     font-family: "Akshar", cursive;
     font-weight: 400;
     font-style: normal;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
 }
 
-#search-navbar {
+#search-navbar-desktop {
     background-color: rgba(255, 255, 255, 0.2);
     color: #7a0000;
     border: 1px solid rgba(255, 255, 255, 0.4);
     border-radius: 0.5rem;
     padding-left: 2.5rem;
+    width: 14rem;
+    transition: width 0.3s ease;
+}
+
+#search-navbar-mobile {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #7a0000;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 0.5rem;
+    padding-left: 2.5rem;
+    width: 100%;
+    transition: width 0.3s ease;
 }
 
 .search-navbar::placeholder {
     color: rgba(255, 255, 255, 0.6);
+}
+
+.main {
+    height: 80vh;
+    position: relative;
+}
+
+.textOver {
+    bottom: 27%;
+    right: 50%;
+    font-family: Libertinus Sans;
+    bottom: 5%;
+    left: 5%;
+    max-width: 90%;
+    z-index: 20;
+    position: absolute;
+}
+
+.textOverDescription {
+    font-family: Playwrite Australia NSW;
+    font-family: Libertinus Sans;
+    font-family: Neucha;
+    font-size: 1.2rem;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.textOver .flex.flex-wrap.gap-2 {
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+@media (min-width:640px) {
+    .textOver .flex.flex-wrap.gap-2 {
+        flex-direction: row; 
+        gap: 0.75rem;
+    }
+}
+
+@media(min-width: 768px) {
+    #search-navbar-mobile {
+        display: none;
+    }
+}
+
+@media(max-width: 767px) {
+    #search-navbar-desktop {
+        display: none;
+    }
+}
+
+@media(min-width: 768px) {
+    #search-navbar-desktop {
+        width: 15rem;
+    }
+}
+
+@media (min-width:640px) {
+    .textOver {
+        bottom: 8%;
+        left: 8%;
+        max-width: 450px;
+    }
+
+    .textOverDescription {
+        font-size: 1rem;
+    }
+
+    .textOver .flex.flex-wrap.gap-2 {
+        flex-direction: row;
+        gap: 0.75rem;
+    }
+}
+
+@media(min-width:1024px) {
+    .textOver {
+        bottom: 12%;
+        left: 10%;
+        max-width: 600px;
+    }
+
+    .textOverDescription {
+        font-size: 1.1rem;
+    }
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+
+.scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.popular {
+    background-color: #111;
+    border-top-left-radius: 1.5rem;
+    border-top-right-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
+    border-bottom-left-radius: 1.5rem;
+    box-shadow: 0px -4px 20px rgba(146, 30, 30, 0.6);
+    /* padding-top: 1rem; */
+    /* padding-bottom: 1rem; */
+    position: relative;
 }
