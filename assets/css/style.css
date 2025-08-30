@@ -4,6 +4,9 @@
 /* .nav{
     background-color: #520202;
 } */
+body{
+    background-color: #0c0b0b;
+}
 .nav {
     background-color: transparent;
     position: absolute;
@@ -30,7 +33,7 @@
 
 .navContent {
     color: #e0dfdf;
-    font-family: "Akshar", cursive;
+    font-family: Libertinus Sans;
     font-weight: 400;
     font-style: normal;
     font-size: 1.1rem;
@@ -65,8 +68,21 @@
     position: relative;
 }
 
+.hero-section {
+  position: relative;
+  height: 100vh;  
+  overflow: hidden;
+}
+
+.blackWidowImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
 .textOver {
-    bottom: 27%;
+    bottom: 10%;
     right: 50%;
     font-family: Libertinus Sans;
     bottom: 5%;
@@ -75,6 +91,7 @@
     z-index: 20;
     position: absolute;
 }
+
 
 .textOverDescription {
     font-family: Playwrite Australia NSW;
@@ -90,10 +107,23 @@
     gap: 0.5rem;
 }
 
+@media (min-width:330px) {
+    .textOver .flex.flex-wrap.gap-2 {
+        flex-direction: row; 
+        gap: 0.3rem;
+    }
+    .buttons{
+        font-size: 0.5rem;
+    }
+}
+
 @media (min-width:640px) {
     .textOver .flex.flex-wrap.gap-2 {
         flex-direction: row; 
         gap: 0.75rem;
+    }
+    .buttons{
+        font-size: 0.8rem;
     }
 }
 
@@ -115,21 +145,105 @@
     }
 }
 
-@media (min-width:640px) {
+
+@media (min-width:295px) {
     .textOver {
-        bottom: 8%;
+        bottom: 65%;
         left: 8%;
         max-width: 450px;
     }
 
+    .blackWidow{
+        font-size: 0.8rem;
+    }
+
+    .movie-details{
+        font-size: 0.5rem;
+    }
+
     .textOverDescription {
-        font-size: 1rem;
+        font-size: 0.6rem;
     }
 
     .textOver .flex.flex-wrap.gap-2 {
         flex-direction: row;
         gap: 0.75rem;
     }
+
+    /* .blackWidowImage{
+        height: 30vh;
+    }
+
+    .hero-section{
+        height: 30vh;
+    } */
+}
+
+@media (min-width:375px) {
+    .textOver {
+        bottom: 65%;
+        left: 8%;
+        max-width: 450px;
+    }
+
+    .blackWidow{
+        font-size: 0.8rem;
+    }
+
+    .movie-details{
+        font-size: 0.5rem;
+    }
+
+    .textOverDescription {
+        font-size: 0.6rem;
+    }
+
+    .textOver .flex.flex-wrap.gap-2 {
+        flex-direction: row;
+        gap: 0.75rem;
+    }
+
+    /* .blackWidowImage{
+        height: 35vh;
+    }
+
+    .hero-section{
+        height: 100vh;
+    } */
+}
+
+@media (min-width:640px) {
+    .textOver {
+        bottom: 30%;
+        left: 8%;
+        max-width: 450px;
+    }
+
+    .textOverDescription {
+        font-size: 0.8rem;
+    }
+
+    .blackWidow{
+        font-size: 1.5rem;
+    }
+
+    .movie-details{
+        font-size: 0.7rem;
+    }
+
+    .textOver .flex.flex-wrap.gap-2 {
+        flex-direction: row;
+        gap: 0.75rem;
+    }
+
+    /* .blackWidowImage{
+        height:90vh;
+    }
+
+    .hero-section{
+        height:100vh;
+    } */
+
 }
 
 @media(min-width:1024px) {
@@ -142,6 +256,22 @@
     .textOverDescription {
         font-size: 1.1rem;
     }
+
+    .blackWidow{
+        font-size: 2.4rem;
+    }
+
+    .movie-details{
+        font-size: 0.9rem;
+    }
+
+    /* .blackWidowImage{
+        height: 100vh;
+    }
+
+    .hero-section{
+        height:100vh;
+    } */
 }
 
 .search {
@@ -167,8 +297,63 @@
     border-top-right-radius: 1.5rem;
     border-bottom-right-radius: 1.5rem;
     border-bottom-left-radius: 1.5rem;
-    box-shadow: 0px -4px 20px rgba(146, 30, 30, 0.6);
+    box-shadow: 0px -4px 20px rgba(175, 24, 24, 0.6);
     /* padding-top: 1rem; */
     /* padding-bottom: 1rem; */
     position: relative;
+}
+
+.scroll-container {
+  scroll-snap-type: x mandatory;
+}
+
+.scroll-container > div {
+  scroll-snap-align: start;
+}
+
+.scroll-container {
+  display: flex;
+  overflow-x: auto;      
+  overflow-y: hidden;    
+  white-space: nowrap;   
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch; 
+}
+
+.scroll-container > div {
+  flex: 0 0 auto;     
+  scroll-snap-align: start;
+}
+
+/* .grid {
+  display: grid;
+}
+.lg\:grid-cols-6 {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+} */
+
+.genre{
+    font-family: Akshar;
+}
+
+.trending-section{
+    /* font-family: Libertinus Sans; */
+}
+
+.footer{
+    background-color: #111;
+}
+
+.hero-section,
+.hero-section > div {
+  pointer-events: auto;
+}
+
+.hero-section .overlay {
+  pointer-events: none;
+}
+
+.contactSec{
+    background-image: url(/assets/images/login.jpeg);
+    background-size: cover;
 }
